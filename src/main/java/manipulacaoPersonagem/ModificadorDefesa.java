@@ -13,6 +13,14 @@ public class ModificadorDefesa {
 		int ca=10;
 		int arm=0;
 		int defNivel;
+		int defOutros=0;
+		int defOutros2=0;
+		if(pnj.getOutrosDefesa()!=null) {
+			defOutros = pnj.getOutrosDefesa();
+		}
+		if(pnj.getOutrosDefesa2()!=null) {
+			defOutros2 = pnj.getOutrosDefesa2();
+		}
 		Armadura armadura; 
 		Armadura armaduraEquipada; 
 		List<Armadura> equipadas = new ArrayList<>();
@@ -38,7 +46,7 @@ public class ModificadorDefesa {
 			}
 		}
 			
-		ca = (ModificadorAtribulto.modificadorDestreza(pnj)+arm+(pnj.getNivelPersonagem()/2));		
+		ca = (ModificadorAtribulto.modificadorDestreza(pnj)+arm+defNivel+defOutros+defOutros2);		
 		return ca;
 	}
 }

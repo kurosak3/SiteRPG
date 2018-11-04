@@ -3,6 +3,8 @@ package criacaoPersonagem;
 public class Talento {
 	
 	private Integer idTalento;
+	private Integer preRequisitoAtributo;
+	private String preRequisito;
 	private String nomeTalento;
 	private String descricao;
 	
@@ -15,20 +17,25 @@ public class Talento {
 	}
 
 
-	public Talento(Integer idTalento, String nomeTalento, String descricao, Personagem personagem, Classe classe) {
+
+
+	public Talento(Integer idTalento, Integer preRequisitoAtributo, String preRequisito, String nomeTalento,
+			String descricao, Personagem personagem, Classe classe) {
 		super();
 		this.idTalento = idTalento;
+		this.preRequisitoAtributo = preRequisitoAtributo;
+		this.preRequisito = preRequisito;
 		this.nomeTalento = nomeTalento;
 		this.descricao = descricao;
 		this.personagem = personagem;
 		this.classe = classe;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Talento [idTalento=" + idTalento + ", nomeTalento=" + nomeTalento + ", descricao=" + descricao
-				+ ", personagem=" + personagem + ", classe=" + classe + "]";
+		return "Talento [idTalento=" + idTalento + ", preRequisitoAtributo=" + preRequisitoAtributo + ", preRequisito="
+				+ preRequisito + ", nomeTalento=" + nomeTalento + ", descricao=" + descricao + ", personagem="
+				+ personagem + ", classe=" + classe + "]";
 	}
 
 
@@ -79,6 +86,22 @@ public class Talento {
 
 	public void setClasse(Classe classe) {
 		this.classe = classe;
+	}
+
+	public Integer getPreRequisitoAtributo() {
+		return preRequisitoAtributo;
+	}
+
+	public void setPreRequisitoAtributo(Integer preRequisitoAtributo) {
+		this.preRequisitoAtributo = preRequisitoAtributo;
+	}
+
+	public String getPreRequisito() {
+		return preRequisito;
+	}
+
+	public void setPreRequisito(String preRequisito) {
+		this.preRequisito = preRequisito;
 	}
 	
 
