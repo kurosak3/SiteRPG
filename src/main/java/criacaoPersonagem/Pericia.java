@@ -1,6 +1,6 @@
 package criacaoPersonagem;
 
-import java.util.List;
+
 
 public class Pericia {
 	

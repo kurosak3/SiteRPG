@@ -13,7 +13,7 @@ public class ModificadorAtribulto {
 		if(atributo %2!=0) {
 			atributo = atributo-1;			
 		}		
-		pnj.setModForca(modForca = (atributo -10)/2);
+		modForca = (atributo -10)/2;
 		
 		return modForca;
 	}
@@ -25,7 +25,7 @@ public class ModificadorAtribulto {
 			atributo = atributo-1;			
 		}
 		
-		pnj.setModDestreza(modDestreza = (atributo -10)/2);
+		modDestreza = (atributo -10)/2;
 		
 		
 		return modDestreza;
@@ -36,14 +36,14 @@ public class ModificadorAtribulto {
 		int atributo;
 		if(pnj.getConstituicao()==null) {
 			atributo =0;
-			pnj.setModConstituicao(modConstituicao = 0);
+			modConstituicao = 0;
 			
 			
 		}else {
 			atributo = pnj.getConstituicao();
 			if(atributo %2!=0) {
 				atributo = atributo-1;
-				pnj.setModConstituicao(modConstituicao = (atributo -10)/2);
+				modConstituicao = (atributo -10)/2;
 				;
 			}
 		}
@@ -61,7 +61,7 @@ public class ModificadorAtribulto {
 			atributo = atributo-1;			
 		}
 		
-		pnj.setModInteligencia(modInteligencia = (atributo -10)/2);
+		modInteligencia = (atributo -10)/2;
 		
 		
 		return modInteligencia;
@@ -74,7 +74,7 @@ public class ModificadorAtribulto {
 			atributo = atributo-1;			
 		}
 		
-		pnj.setModSabedoria(modSabedoria = (atributo -10)/2);
+		modSabedoria = (atributo -10)/2;
 		
 		
 		return modSabedoria;
@@ -88,7 +88,7 @@ public class ModificadorAtribulto {
 			atributo = atributo-1;			
 		}
 		
-		pnj.setModCarisma(modCarisma = (atributo -10)/2);
+		modCarisma = (atributo -10)/2;
 		
 		
 		return modCarisma;
