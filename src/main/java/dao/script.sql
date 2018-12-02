@@ -1,14 +1,11 @@
+drop database siteRpgTormenta;
+
+create database siteRpgTormenta;
+
+use siteRpgTormenta;
 
 
-
-
-
-create table classe(idClasse int primary key auto_increment,
-	nomeClasse varchar(50) not null unique,
-	tipoDeClasse int not null,
-	nivelClasse int,
-	bba int,
-	HabilidadeDeClasse);
+create table classe();
 	
 	
 create table talento();

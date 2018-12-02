@@ -1,108 +1,90 @@
 package criacaoPersonagem;
 
+import preRequisito.PreRequisitoPericia;
+import preRequisito.PreRequisitoTalentos;
+
+
 public class Talento {
 	
-	private Integer idTalento;
-	private Integer preRequisitoAtributo;
-	private String preRequisito;
+	private Integer idTalento;	
 	private String nomeTalento;
-	private String descricao;
-	
+	private PreRequisitoTalentos preRequisitosTalento;
+	private PreRequisitoPericia preRequisitoPericia;
+	private String descricao;	
 	private Personagem personagem;
 	private Classe classe;
 	
 	
 	public Talento() {
-		// TODO Auto-generated constructor stub
+		
 	}
-
-
-
-
-	public Talento(Integer idTalento, Integer preRequisitoAtributo, String preRequisito, String nomeTalento,
-			String descricao, Personagem personagem, Classe classe) {
+	
+	
+	public Talento(Integer idTalento, String nomeTalento, PreRequisitoTalentos preRequisitosTalento,
+			PreRequisitoPericia preRequisitoPericia, String descricao) {
 		super();
 		this.idTalento = idTalento;
-		this.preRequisitoAtributo = preRequisitoAtributo;
-		this.preRequisito = preRequisito;
 		this.nomeTalento = nomeTalento;
+		this.preRequisitosTalento = preRequisitosTalento;
+		this.preRequisitoPericia = preRequisitoPericia;
 		this.descricao = descricao;
-		this.personagem = personagem;
-		this.classe = classe;
+		
 	}
 
 	@Override
 	public String toString() {
-		return "Talento [idTalento=" + idTalento + ", preRequisitoAtributo=" + preRequisitoAtributo + ", preRequisito="
-				+ preRequisito + ", nomeTalento=" + nomeTalento + ", descricao=" + descricao + ", personagem="
-				+ personagem + ", classe=" + classe + "]";
+		return "Talento [idTalento=" + idTalento + ", nomeTalento=" + nomeTalento + ", preRequisitosTalento="
+				+ preRequisitosTalento + ", preRequisitoPericia=" + preRequisitoPericia + ", descricao=" + descricao
+				+ "]";
 	}
-
-
+	
 	public Integer getIdTalento() {
 		return idTalento;
 	}
-
-
 	public void setIdTalento(Integer idTalento) {
 		this.idTalento = idTalento;
 	}
-
-
 	public String getNomeTalento() {
 		return nomeTalento;
 	}
-
-
 	public void setNomeTalento(String nomeTalento) {
 		this.nomeTalento = nomeTalento;
 	}
-
-
 	public String getDescricao() {
 		return descricao;
 	}
-
-
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
-
 	public Personagem getPersonagem() {
 		return personagem;
 	}
-
-
 	public void setPersonagem(Personagem personagem) {
 		this.personagem = personagem;
 	}
-
-
 	public Classe getClasse() {
 		return classe;
 	}
-
-
 	public void setClasse(Classe classe) {
 		this.classe = classe;
 	}
-
-	public Integer getPreRequisitoAtributo() {
-		return preRequisitoAtributo;
+	public PreRequisitoTalentos getPreRequisitosTalento() {
+		return preRequisitosTalento;
 	}
-
-	public void setPreRequisitoAtributo(Integer preRequisitoAtributo) {
-		this.preRequisitoAtributo = preRequisitoAtributo;
+	public void setPreRequisitosTalento(PreRequisitoTalentos preRequisitosTalento) {
+		this.preRequisitosTalento = preRequisitosTalento;
 	}
-
-	public String getPreRequisito() {
-		return preRequisito;
+	public PreRequisitoPericia getPreRequisitoPericia() {
+		return preRequisitoPericia;
 	}
-
-	public void setPreRequisito(String preRequisito) {
-		this.preRequisito = preRequisito;
+	public void setPreRequisitoPericia(PreRequisitoPericia preRequisitoPericia) {
+		this.preRequisitoPericia = preRequisitoPericia;
 	}
+	
+	
+
+
+
 	
 
 }

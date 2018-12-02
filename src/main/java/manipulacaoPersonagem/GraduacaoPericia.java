@@ -1,33 +1,61 @@
 package manipulacaoPersonagem;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import criacaoPersonagem.Pericia;
 import criacaoPersonagem.Personagem;
+import util.UltilValidar;
+
 
 public class GraduacaoPericia {
 	
 	
-	public static Integer calcularPericia(Personagem pnj) {
-		int graduação =0;
-		Pericia pericia;
-		Pericia periciaClasse;
-		List<Pericia> pericias= new ArrayList<>();
-		for(int a=0;a<pnj.getPericias().size();a++) {
-			for(int i=0;i<pericias.size();i++) {
-				pericia = new Pericia();
-				periciaClasse = new Pericia();
-				periciaClasse =  pnj.getPericias().get(i);
-				pericia = pericias.get(a);				
-				if(periciaClasse.getIdPericia()==pericia.getIdPericia()) {
-										
-					continue;				
-				}					
-			}
-		}
+	public static Integer calcularPericiaClasse(Personagem pnj, Pericia per) {
+		int graduacao =0;
+		int modAtribulto;
+		int penalidade;
+		int outros;
+		int totalGraduacao;
+				
+		graduacao = pnj.getNivelPersonagem() +3;		
+		modAtribulto = per.getModAtributo();
+		outros = per.getModOutros();		
+		penalidade = per.getPenalidade();
+		UltilValidar.valInteiro(outros);
+		UltilValidar.valInteiro(penalidade);
+		if(penalidade>0) {
+			totalGraduacao = graduacao+modAtribulto+outros-penalidade;
+		}else{
+			totalGraduacao = graduacao+modAtribulto+outros;	
+		}		
 		
-		return graduação;
+		return totalGraduacao;
+	}
+	
+	public static Integer calcularPericia(Personagem pnj, Pericia per) {
+		int graduacao =0;
+		int modAtribulto;
+		int penalidade;
+		int outros;
+		int totalGraduacao;
+				
+		graduacao = pnj.getNivelPersonagem();
+		if(graduacao %2!=0) {
+			graduacao = (graduacao-1)/2;			
+		}else {
+			graduacao = graduacao/2;
+		}
+		modAtribulto = per.getModAtributo();
+		outros = per.getModOutros();		
+		penalidade = per.getPenalidade();
+		UltilValidar.valInteiro(outros);
+		UltilValidar.valInteiro(penalidade);
+		if(penalidade>0) {
+			totalGraduacao = graduacao+modAtribulto+outros-penalidade;
+		}else{
+			totalGraduacao = graduacao+modAtribulto+outros;	
+		}		
+		
+		
+		return totalGraduacao;
 	}
 
 }

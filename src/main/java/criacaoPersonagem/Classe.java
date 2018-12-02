@@ -8,30 +8,25 @@ public class Classe {
 	private String nomeClasse;
 	private String tipoDeClasse;
 	private Integer nivelClasse;
-	private Integer bba;
-	
-	
+	private Integer bba;	
 	private List<Classe> HabilidadesDeClasse;	
 	private List<Talento> talentos;
 	private List<Pericia> pericias;
 	
 	public Classe() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
-	public Classe(Long idClasse, String nomeClasse, String tipoDeClasse, Integer nivelClasse, Integer bba,
-			List<Classe> habilidadesDeClasse, List<Talento> talentos, List<Pericia> pericias) {
+	public Classe(Long idClasse, String nomeClasse, String tipoDeClasse, Integer nivelClasse, Integer bba) {
 		super();
 		this.idClasse = idClasse;
 		this.nomeClasse = nomeClasse;
 		this.tipoDeClasse = tipoDeClasse;
 		this.nivelClasse = nivelClasse;
 		this.bba = bba;
-		HabilidadesDeClasse = habilidadesDeClasse;
-		this.talentos = talentos;
-		this.pericias = pericias;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Classe [idClasse=" + idClasse + ", nomeClasse=" + nomeClasse + ", tipoDeClasse=" + tipoDeClasse
