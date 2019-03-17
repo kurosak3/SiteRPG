@@ -3,11 +3,11 @@ package util;
 import java.util.ArrayList;
 import java.util.List;
 
-import criacaoPersonagem.Arma;
-import criacaoPersonagem.Armadura;
-import criacaoPersonagem.Classe;
-import criacaoPersonagem.Pericia;
-import criacaoPersonagem.Talento;
+import tormentaRpg.criacaoPersonagem.Arma;
+import tormentaRpg.criacaoPersonagem.Armadura;
+import tormentaRpg.criacaoPersonagem.Classe;
+import tormentaRpg.criacaoPersonagem.Pericia;
+import tormentaRpg.criacaoPersonagem.Talento;
 
 public class UltilValidar {
 
